@@ -1,0 +1,22 @@
+body {
+  background-color: #456678;
+  color: #FFFFFF;
+  font-size: 30px;
+}
+
+#coo{
+  cursor: pointer;
+}
+
+#container{
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#upgrade{
+  width: 75%;
+  height: 100px;
+  background-color: red;
+  margin-left: auto;
+  margin-right: auto;
+}
