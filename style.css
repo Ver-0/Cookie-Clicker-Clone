@@ -1,4 +1,4 @@
-body {
+body{
   background-color: #456678;
   color: #FFFFFF;
   font-size: 30px;
@@ -6,6 +6,8 @@ body {
 
 #coo{
   cursor: pointer;
+  width: auto;
+  height: auto;
 }
 
 #container{
@@ -15,8 +17,28 @@ body {
 
 #upgrade{
   width: 75%;
-  height: 100px;
+  height: 300px;
   background-color: red;
   margin-left: auto;
   margin-right: auto;
+
+}
+
+#coo{
+  width: 500px;
+  height: 500px;
+  border-radius: 50%;
+  transition: transform .4s;
+}
+
+#coo:hover{
+  transform: scale(0.95);
+}
+
+.upg{
+  background-color: blue;
+  width: 33%;
+  height: 20%;
+  text-align: center;
+  line-height: 150%;
 }
