@@ -3,6 +3,8 @@ var cursor = 1; //Upgrade 1
 var cenaup1 = 20; //Upgrade 1
 var cenaup2 = 50; //Upgrade 2
 var loop = 0; //Upgrade 2
+var multiplier = 1; //Upgrade 3
+var cenaup3 = 1000; //Upgrade 3
 
 
 function klik() {
@@ -12,14 +14,14 @@ function klik() {
 }
 
 function up2loop() {
-  cookies = cookies + 1;
+  cookies = cookies + 10;
   document.getElementById("count").innerHTML = cookies;
   console.log("Cookies:" + cookies);
 }
 
 function upg1() {
   if (cookies >= cenaup1) {
-    cursor = cursor + 1;
+    cursor = (cursor + 1) * multiplier;
     console.log("Cursor:"+cursor);
     cookies = cookies - cenaup1;
     document.getElementById("count").innerHTML = cookies;
@@ -49,4 +51,23 @@ function upg2() {
     console.log("Not enough cookies");
   }
 
+}
+
+function upg3() {
+  if (cookies >= cenaup3) {
+  multiplier = multiplier + 1;
+  console.log("Multiplier:"+multiplier);
+  cookies = cookies - cenaup3;
+  cursor = (cursor + 1) * multiplier;
+
+  document.getElementById("count").innerHTML = cookies;
+  document.getElementById("u3").innerHTML = "Cursor Multiplier(" + multiplier + ")";
+
+  cenaup3 = cenaup3 + Math.round(cenaup3 / 2);
+  document.getElementById("c3").innerHTML = "(" + cenaup3 + ")";
+  document.getElementById("u1").innerHTML = "Cursor(" + cursor + ")";
+
+  } else {
+    console.log("Not enough cookies");
+  }
 }
